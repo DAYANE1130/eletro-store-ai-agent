@@ -1,53 +1,51 @@
 # ELETRO STORE AI AGENT
 
-# 🛍️ Assistente Virtual de Atendimento Inteligente (MVP)
 
-[cite_start]Este projeto consiste em um **MVP (Minimum Viable Product)** de um assistente de atendimento para uma loja de eletrônicos, focado em automatizar interações complexas e processos de tomada de decisão através de IA Generativa[cite: 10, 11].
+```markdown
+# 🛍️ Assistente Virtual de Atendimento ao Cliente (MVP)
+
+Este repositório contém um **Mínimo Produto Viável (MVP)** de um assistente inteligente projetado para uma loja online de eletrônicos. O objetivo é automatizar o suporte ao cliente, integrando processamento de linguagem natural, visão computacional e tomada de decisão autônoma.
 
 ## 📄 Contexto do Problema
-[cite_start]Lojas de e-commerce enfrentam gargalos no atendimento manual de tarefas repetitivas[cite: 25]. Este assistente resolve:
-* [cite_start]**Dúvidas Frequentes:** Respostas sobre produtos e políticas da loja[cite: 25].
-* [cite_start]**Processamento de Arquivos:** Leitura de comprovantes e imagens de defeitos via Visão Computacional[cite: 25].
-* [cite_start]**Ações Transacionais:** Integração com funções internas para resolver problemas em tempo real[cite: 23].
-* [cite_start]**Tomada de Decisão (If Mágico):** Uso de IA para aplicar regras de negócio e decidir ações automaticamente[cite: 11].
+Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o suporte. Este projeto resolve:
+* **Dúvidas Frequentes:** Responde sobre produtos, pedidos e políticas da loja.
+* **Processamento Multimodal:** Analisa comprovantes de pagamento (PDF) e imagens de produtos com defeito enviadas pelos clientes.
+* **Ações Transacionais:** Integração com funções internas para resolver problemas em tempo real sem intervenção humana.
+* **Tomada de Decisão (If Mágico):** Utiliza IA para analisar dados do cliente e decidir automaticamente qual ação tomar com base em regras de negócio pré-definidas.
 
 ## 🛠️ Tecnologias e Ferramentas
-* [cite_start]**Linguagem:** Python[cite: 13, 37].
-* [cite_start]**IA Generativa:** Google Gemini API (LLM & Vision)[cite: 14, 25].
-* [cite_start]**Framework Web:** Flask[cite: 13].
-* [cite_start]**Interface:** Gradio[cite: 22].
-* [cite_start]**Arquitetura:** Function Calling e Lógica de Negócio Baseada em Agentes[cite: 10].
-* **Deploy:** Hugging Face Spaces.
+* **Linguagem:** Python
+* **IA Generativa:** Google Gemini API (LLM & Vision)
+* **Framework Web:** Flask
+* **Interface do Usuário:** Gradio
+* **Arquitetura:** Function Calling e Lógica de Negócio Assistida por IA
+* **Hospedagem:** Deploy realizado no Hugging Face Spaces
 
-## ✅ Funcionalidades Implementadas
-* [cite_start]**Chatbot Multimodal:** Suporte para mensagens de texto, imagens e PDFs[cite: 24, 25].
-* **Function Calling (Ações Internas):**
-    * `atualizar_status_pedido`: Altera o estado da entrega no sistema.
-    * `gerar_cupom_desconto`: Cria cupons personalizados com base na interação.
-    * `registrar_reclamacao`: Formaliza feedbacks de produtos com defeito.
-* [cite_start]**Motor de Regras (If Mágico):** A IA analisa o histórico e os dados do cliente para decidir, de forma autônoma, qual função disparar seguindo as diretrizes da loja[cite: 11].
+## ✅ Funcionalidades Principais
+* **Chatbot Interativo:** Interface que permite o envio de mensagens de texto, imagens e documentos.
+* **Chamada de Funções (Function Calling):** A IA decide autonomamente quando acionar ferramentas internas para:
+    * Atualizar o status de um pedido.
+    * Gerar cupons de desconto personalizados.
+    * Registrar reclamações técnicas sobre produtos.
+* **Inteligência de Negócio (If Mágico):** Implementação de lógica generativa que orienta o comportamento da IA de acordo com as diretrizes da empresa.
 
-## 🏗️ Arquitetura do Projeto
-[cite_start]O projeto segue uma estrutura organizada para facilitar a manutenção e escalabilidade[cite: 26]:
+## 🏗️ Estrutura do Projeto
 ```text
 ├── app.py              # Ponto de entrada (Flask + Gradio)
-├── core/               # Lógica de negócio e "If Mágico"
-├── agents/             # Integração com Gemini e definições de Functions
-├── utils/              # Processamento de arquivos (PDF/Imagens)
-├── requirements.txt    # Dependências do projeto
+├── core/               # Lógica de negócio e regras do "If Mágico"
+├── agents/             # Configuração do Gemini e definições de funções
+├── utils/              # Processamento de arquivos (Imagens e PDFs)
+├── requirements.txt    # Dependências do sistema
 └── .env                # Variáveis de ambiente (API Keys)
 ```
 
 ## 🚀 Como Executar
-1. [cite_start]Clone o repositório: `git clone https://github.com/DAYANE1130/nome-do-repo`[cite: 6].
-2. Instale as dependências: `pip install -r requirements.txt`.
-3. Configure sua `GOOGLE_API_KEY` no arquivo `.env`.
-4. Execute a aplicação: `python app.py`.
+1. Clone este repositório: `git clone https://github.com/DAYANE1130/seu-repositorio`
+2. Instale as dependências: `pip install -r requirements.txt`
+3. Crie um arquivo `.env` e adicione sua `GOOGLE_API_KEY`.
+4. Inicie a aplicação: `python app.py`
 
 ---
-[cite_start]**Desenvolvido por Dayane Martins** *Focado em Backend, IA e Automação de Processos.* [cite: 1, 4]
+**Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.*
+```
 
----
-
-### 💡 Dica de Sucesso (Recrutadora):
-[cite_start]Ao publicar no LinkedIn, destaque que o **"If Mágico"** não é um código estático, mas sim a **IA interpretando regras de negócio complexas** para agir sozinha[cite: 11]. Isso demonstra que você entende o conceito de **Agentes Autônomos**, a tendência mais forte de 2026.
