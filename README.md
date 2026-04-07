@@ -1,7 +1,7 @@
 # ELETRO STORE AI AGENT
 
 
-```markdown
+```
 # 🛍️ Assistente Virtual de Atendimento ao Cliente (MVP)
 
 Este repositório contém um **Mínimo Produto Viável (MVP)** de um assistente inteligente projetado para uma loja online de eletrônicos. O objetivo é automatizar o suporte ao cliente, integrando processamento de linguagem natural, visão computacional e tomada de decisão autônoma.
@@ -30,7 +30,7 @@ Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o 
 * **Inteligência de Negócio (If Mágico):** Implementação de lógica generativa que orienta o comportamento da IA de acordo com as diretrizes da empresa.
 
 ## 🏗️ Estrutura do Projeto
-```text
+
 ├── app.py              # Ponto de entrada (Flask + Gradio)
 ├── core/               # Lógica de negócio e regras do "If Mágico"
 ├── agents/             # Configuração do Gemini e definições de funções
@@ -45,7 +45,5 @@ Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o 
 3. Crie um arquivo `.env` e adicione sua `GOOGLE_API_KEY`.
 4. Inicie a aplicação: `python app.py`
 
----
-**Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.*
-```
+**Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.**
 
