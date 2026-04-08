@@ -2,7 +2,7 @@ from google import genai
 from google.genai import types
 import os
 from services.functions_services import get_status_order, update_status_order, generate_complaint,generate_discount_coupon
-from services.business_rules import business_rules
+from services.business_rules_services import business_rules
 
 # INTEGRANDO COM GEMINI
 # Criando cliente para interagir com Gemini
