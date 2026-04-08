@@ -1,27 +1,11 @@
 from flask import Flask, render_template, request
-from services.config_gemini import client,chat
+from services.gemini_integration_services import client,chat
+from utils.gemini_upload import upload_file
+from google.api_core.exceptions import InvalidArgument
 import time
 import gradio as gr
 
 app = Flask(__name__)
-
-# criando função que permite upload dos arquivos enviados pelo usuário
-
-
-def upload_file(message):
-
-    uploaded_files = []  # todos os arquivos
-    if message['files']:  # verifico se existe algum arquivo para upload
-        for path_file in message["files"]:  # passear no mundo do array
-            uploaded_file = client.files.upload(file=path_file)  # upload de
-            while uploaded_file.state.name == "PROCESSING":
-
-                time.sleep(5)  # vai esperar quanto o status está
-                uploaded_file = client.files.get(name=uploaded_file.name)
-
-            uploaded_files.append(uploaded_file)
-
-    return uploaded_files
 
 # criando função de bate papo para  enviar ao Gradio
 
@@ -35,13 +19,24 @@ def get_response(message, _history):
         prompt.extend(file)
         response = chat.send_message(prompt)
         print("SOU A RESPOSTA da função de bate papo", response.text)
-        return response.text
-    except Exception as e:
+    except InvalidArgument as e:
         print(f"Erro: {e}")
+        response = chat.send_message(
+            f"O usuário te enviou um arquivo para você ler e obteve o erro: {e}. "
+            "Pode explicar o que houve e dizer quais tipos de arquivos você "
+            "dá suporte? Assuma que a pessoa não sabe programação e "
+            "não quer ver o erro original. Explique de forma simples e concisa."
+        )
+    return response.text
 
 
 # INTEGRANDO COM O GRADIO -testando primeiro contato
-gr.ChatInterface(fn=get_response, multimodal=True).launch()
+gr.ChatInterface(
+    fn=get_response,  
+    title="Assistente Virtual da Eletro Store",
+    type="messages",
+    multimodal=True
+    ).launch()
 
 # Rotas básicas
 
