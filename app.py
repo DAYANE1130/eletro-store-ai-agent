@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from services.gemini_integration_services import client,chat
+from services.gemini_integration_services import chat
 from utils.gemini_upload import upload_file
 from google.api_core.exceptions import InvalidArgument
 import time
@@ -22,10 +22,7 @@ def get_response(message, _history):
     except InvalidArgument as e:
         print(f"Erro: {e}")
         response = chat.send_message(
-            f"O usuário te enviou um arquivo para você ler e obteve o erro: {e}. "
-            "Pode explicar o que houve e dizer quais tipos de arquivos você "
-            "dá suporte? Assuma que a pessoa não sabe programação e "
-            "não quer ver o erro original. Explique de forma simples e concisa."
+            f"O usuário te enviou um arquivo para você ler e obteve o erro: {e}.Pode explicar o que houve e dizer quais tipos de arquivos você dá suporte? Assuma que a pessoa não sabe programação e não quer ver o erro original. Explique de forma simples e concisa."
         )
     return response.text
 
@@ -33,8 +30,7 @@ def get_response(message, _history):
 # INTEGRANDO COM O GRADIO -testando primeiro contato
 gr.ChatInterface(
     fn=get_response,  
-    title="Assistente Virtual da Eletro Store",
-    type="messages",
+    title="Assistente Virtual Eletro Store",
     multimodal=True
     ).launch()
 
