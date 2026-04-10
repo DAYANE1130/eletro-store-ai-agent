@@ -1,49 +1,169 @@
-# ELETRO STORE AI AGENT
+# 💡 Assistente Virtual com IA para Atendimento ao Cliente
 
+Este projeto é um **Assistente virtual inteligente** desenvolvido para simular o atendimento de uma loja de eletrônicos.
+
+<p align="center">
+  <img src="./demo.gif" alt="Demonstração do projeto" width="700"/>
+</p>
+
+Ele permite que clientes enviem mensagens e arquivos (como imagens ou comprovantes), e a aplicação utiliza **Inteligência Artificial** para entender o contexto e **executar ações automaticamente** de acordo com o contexto da interação.
+
+---
+
+## 🎯 O que este projeto faz?
+
+Imagine um atendimento automático onde você pode:
+
+* Perguntar sobre um pedido 📦
+* Enviar um comprovante de pagamento 🧾
+* Reclamar de um produto com defeito 🛠️
+
+👉 O sistema entende sua solicitação e responde de forma inteligente,chamando funções internas.
+
+---
+
+## ⚙️ Funcionalidades
+
+* 💬 Chat interativo com IA
+* 📦 Consulta de status de pedidos
+* 🎟️ Geração de cupons de desconto
+* 🛠️ Registro de reclamações
+* 📁 Processamento de arquivos enviados pelo usuário
+* 📋 Informações sobre políticas da loja
+
+---
+
+## 🧠 Como funciona?
+
+O sistema utiliza IA generativa (Gemini) para:
+
+* Interpretar a mensagem do usuário
+* Identificar a intenção
+* Decidir qual ação executar
+
+👉 Exemplo:
+
+* Se o usuário envia um comprovante → o sistema pode atualizar o pedido
+* Se o usuário reclama → o sistema registra a reclamação e pode gerar um cupom de desconto
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* 🐍 Python
+* 🌐 Flask
+* 🎛️ Gradio
+* 🤖 IA Generativa (Gemini)
+
+---
+
+## 🎬 Demonstração
+
+![Demonstração do projeto](./)
+
+---
+
+## 🚀 Como rodar o projeto
+
+### 1️⃣ Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+---
+
+### 2️⃣ Crie e ative um ambiente virtual
+
+```bash
+pyenv virtualenv 3.13.0 eletro_store_ai_agent
+pyenv activate eletro_store_ai_agent
+```
+
+---
+
+### 3️⃣ Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Configure a chave da API
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+GEMINI_API_KEY=sua_chave_aqui
+```
+
+---
+
+### 5️⃣ Execute a aplicação
+
+```bash
+python app.py
+```
+
+---
+
+### 6️⃣ Acesse no navegador
 
 ```
-# 🛍️ Assistente Virtual de Atendimento ao Cliente (MVP)
+http://127.0.0.1:7860
+```
 
-Este repositório contém um **Mínimo Produto Viável (MVP)** de um assistente inteligente projetado para uma loja online de eletrônicos. O objetivo é automatizar o suporte ao cliente, integrando processamento de linguagem natural, visão computacional e tomada de decisão autônoma.
+---
 
-## 📄 Contexto do Problema
-Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o suporte. Este projeto resolve:
-* **Dúvidas Frequentes:** Responde sobre produtos, pedidos e políticas da loja.
-* **Processamento Multimodal:** Analisa comprovantes de pagamento (PDF) e imagens de produtos com defeito enviadas pelos clientes.
-* **Ações Transacionais:** Integração com funções internas para resolver problemas em tempo real sem intervenção humana.
-* **Tomada de Decisão (If Mágico):** Utiliza IA para analisar dados do cliente e decidir automaticamente qual ação tomar com base em regras de negócio pré-definidas.
+## 🧪 Exemplos de uso
 
-## 🛠️ Tecnologias e Ferramentas
-* **Linguagem:** Python
-* **IA Generativa:** Google Gemini API (LLM & Vision)
-* **Framework Web:** Flask
-* **Interface do Usuário:** Gradio
-* **Arquitetura:** Function Calling e Lógica de Negócio Assistida por IA
-* **Hospedagem:** Deploy realizado no Hugging Face Spaces
+Você pode testar com mensagens como:
 
-## ✅ Funcionalidades Principais
-* **Chatbot Interativo:** Interface que permite o envio de mensagens de texto, imagens e documentos.
-* **Chamada de Funções (Function Calling):** A IA decide autonomamente quando acionar ferramentas internas para:
-    * Atualizar o status de um pedido.
-    * Gerar cupons de desconto personalizados.
-    * Registrar reclamações técnicas sobre produtos.
-* **Inteligência de Negócio (If Mágico):** Implementação de lógica generativa que orienta o comportamento da IA de acordo com as diretrizes da empresa.
+* "Qual o status do meu pedido 123?"
+* "Segue meu comprovante de pagamento"
+* "Meu produto veio com defeito"
+
+---
+
+## 📌 Status do projeto
+
+🚧 Este é um MVP (Minimum Viable Product)
+
+O projeto será evoluído com melhorias como:
+
+* Otimização de tempo de resposta
+* Melhor tomada de decisão com IA
+* Expansão das funcionalidades
+
+---
+
+## 💼 Sobre mim
+
+Este projeto faz parte dos meus estudos em **IA aplicada e desenvolvimento backend**.
+
+---
+
+## 🔗 Link do projeto
+
+https://github.com/DAYANE1130/eletro-store-ai-agent/tree/eletro-store-ai
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para sugerir melhorias.
+
 
 ## 🏗️ Estrutura do Projeto
 
 ├── app.py              # Ponto de entrada (Flask + Gradio)
-├── core/               # Lógica de negócio e regras do "If Mágico"
-├── agents/             # Configuração do Gemini e definições de funções
+├── database.py         # Banco ficticio/ mock
+├── services/           # Regras do "If Mágico",Configuração do Gemini e definições de funções       
 ├── utils/              # Processamento de arquivos (Imagens e PDFs)
 ├── requirements.txt    # Dependências do sistema
-└── .env                # Variáveis de ambiente (API Keys)
 ```
 
-## 🚀 Como Executar
-1. Clone este repositório: `git clone https://github.com/DAYANE1130/seu-repositorio`
-2. Instale as dependências: `pip install -r requirements.txt`
-3. Crie um arquivo `.env` e adicione sua `GOOGLE_API_KEY`.
-4. Inicie a aplicação: `python app.py`
 
-**Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.**
 
