@@ -99,9 +99,9 @@ pip install -r requirements.txt
 
 ### 4️⃣ Configure a chave da API
 
-Crie um arquivo `.env` na raiz do projeto:
+Para garantir a segurança, configure localmente a chave da sua API, não coloque  no arquivo .env.
 
-```env
+```
 GEMINI_API_KEY=sua_chave_aqui
 ```
 
