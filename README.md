@@ -155,6 +155,10 @@ Este projeto faz parte dos meus estudos em **IA aplicada e desenvolvimento backe
 
 https://github.com/DAYANE1130/eletro-store-ai-agent/tree/eletro-store-ai
 
+## 🔗 Link do Hugging Face
+
+https://huggingface.co/spaces/DAYANE/eletro-store-ai
+
 ---
 
 ## 🤝 Contribuição
