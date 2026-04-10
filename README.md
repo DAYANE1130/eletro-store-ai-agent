@@ -1,4 +1,4 @@
-# 💡 Assistente Virtual com IA para Atendimento ao Cliente - Eletro Store
+## 💡 Assistente Virtual com IA para Atendimento ao Cliente - Eletro Store
 
 Este projeto é um **Assistente Virtual Inteligente** desenvolvido para simular o atendimento de uma loja de eletrônicos.
 
