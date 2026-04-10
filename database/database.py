@@ -74,21 +74,11 @@ customers: Dict[str, Dict[str, Any]] = {
 }
 
 
-def list_customers() -> Dict[str, Dict[str, Any]]:
-    customers_list = []
-    for customer in customers:
-        customers_list.append(customer)
-    return customers_list
-
-#print('sou a lista de customers', list_customers())
-# //['cliente_01', 'cliente_02', 'cliente_03', 'cliente_04', 'cliente_05']
-
-
-def get_customer(customer_id: str) -> Optional[Dict[str, Any]]:
+def get_customer(id_user: str | None, num_order: int | None) -> Optional[Dict[str, Any]]:
     for dados in customers.values():
 
-        # 2. Verificamos se o ID e o Número do Pedido coincidem
-        if (dados["id_cliente"] == customer_id):
+        if id_user and str(dados["id_cliente"]) == str(id_user):
             return dados
-#teste de busca de cliente
-# print(get_customer("5"))#retorna todos os dados do cliente
+        if (num_order and dados["num_pedido"] == num_order):
+            return dados
+        
