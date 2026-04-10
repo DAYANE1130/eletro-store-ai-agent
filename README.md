@@ -1,10 +1,12 @@
-# 💡 Assistente Virtual com IA para Atendimento ao Cliente
+# 💡 Assistente Virtual com IA para Atendimento ao Cliente - Eletro Store
 
-Este projeto é um **Assistente virtual inteligente** desenvolvido para simular o atendimento de uma loja de eletrônicos.
+Este projeto é um **Assistente Virtual Inteligente** desenvolvido para simular o atendimento de uma loja de eletrônicos.
+
 
 <p align="center">
   <img src="./demo.gif" alt="Demonstração do projeto" width="700"/>
 </p>
+
 
 Ele permite que clientes enviem mensagens e arquivos (como imagens ou comprovantes), e a aplicação utiliza **Inteligência Artificial** para entender o contexto e **executar ações automaticamente** de acordo com o contexto da interação.
 
@@ -55,13 +57,17 @@ O sistema utiliza IA generativa (Gemini) para:
 * 🎛️ Gradio
 * 🤖 IA Generativa (Gemini)
 
----
+  
+## 🏗️ Estrutura do Projeto
+```
+├── app.py              # Ponto de entrada (Flask + Gradio)
+├── database.py         # Banco ficticio/ mock
+├── services/           # Regras do "If Mágico",Configuração do Gemini e definições de funções       
+├── utils/              # Processamento de arquivos (Imagens e PDFs)
+├── requirements.txt    # Dependências do sistema
+```
 
-## 🎬 Demonstração
 
-![Demonstração do projeto](./)
-
----
 
 ## 🚀 Como rodar o projeto
 
@@ -155,15 +161,6 @@ https://github.com/DAYANE1130/eletro-store-ai-agent/tree/eletro-store-ai
 
 Sinta-se à vontade para sugerir melhorias.
 
-
-## 🏗️ Estrutura do Projeto
-
-├── app.py              # Ponto de entrada (Flask + Gradio)
-├── database.py         # Banco ficticio/ mock
-├── services/           # Regras do "If Mágico",Configuração do Gemini e definições de funções       
-├── utils/              # Processamento de arquivos (Imagens e PDFs)
-├── requirements.txt    # Dependências do sistema
-```
 
 
 
