@@ -1,5 +1,5 @@
 # ELETRO STORE AI AGENT
-
+Código na branch eletro-store-ai https://github.com/DAYANE1130/eletro-store-ai-agent/tree/eletro-store-ai
 
 ```markdown
 # 🛍️ Assistente Virtual de Atendimento ao Cliente (MVP)
@@ -29,21 +29,6 @@ Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o 
     * Registrar reclamações técnicas sobre produtos.
 * **Inteligência de Negócio (If Mágico):** Implementação de lógica generativa que orienta o comportamento da IA de acordo com as diretrizes da empresa.
 
-## 🏗️ Estrutura do Projeto
-```text
-├── app.py              # Ponto de entrada (Flask + Gradio)
-├── core/               # Lógica de negócio e regras do "If Mágico"
-├── agents/             # Configuração do Gemini e definições de funções
-├── utils/              # Processamento de arquivos (Imagens e PDFs)
-├── requirements.txt    # Dependências do sistema
-└── .env                # Variáveis de ambiente (API Keys)
-```
-
-## 🚀 Como Executar
-1. Clone este repositório: `git clone https://github.com/DAYANE1130/seu-repositorio`
-2. Instale as dependências: `pip install -r requirements.txt`
-3. Crie um arquivo `.env` e adicione sua `GOOGLE_API_KEY`.
-4. Inicie a aplicação: `python app.py`
 
 ---
 **Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.*
