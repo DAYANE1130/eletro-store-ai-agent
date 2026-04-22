@@ -29,7 +29,14 @@ Lojas de e-commerce enfrentam alta demanda em tarefas repetitivas que atrasam o 
     * Registrar reclamações técnicas sobre produtos.
 * **Inteligência de Negócio (If Mágico):** Implementação de lógica generativa que orienta o comportamento da IA de acordo com as diretrizes da empresa.
 
+🚧 Próximos Passos:
 
+Implementar Banco de Dados (PostgreSQL/Supabase) para persistência de pedidos.
+
+Adicionar Testes Unitários (Pytest) para as funções de cupom e reclamação.
+
+Containerização da aplicação com Docker para deploy
+.
 ---
 **Desenvolvido por Dayane Martins** *Foco em Backend, IA Generativa e Soluções Cloud.*
 ```
