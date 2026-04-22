@@ -145,15 +145,19 @@ O projeto será evoluído com melhorias como:
 
 ---
 
-## 💼 Sobre mim
+🚧 Próximos Passos:
 
-Este projeto faz parte dos meus estudos em **IA aplicada e desenvolvimento backend**.
+Implementar Banco de Dados (PostgreSQL/Supabase) para persistência de pedidos.
 
----
+Adicionar Testes Unitários (Pytest) para as funções de cupom e reclamação.
+
+Containerização da aplicação com Docker para deploy em nuvem (GCP).
+
 
 ## 🔗 Link do projeto
 
 https://github.com/DAYANE1130/eletro-store-ai-agent/tree/eletro-store-ai
+
 
 ## 🔗 Link do Hugging Face
 
